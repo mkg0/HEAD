@@ -1,208 +1,208 @@
 # HEAD
 
-A list of everything that could go in the `<head>` of your document
+Sayfanızın `<head>` bölümü içerisine girebilecek her şeyin listesi
 
-## Table of Contents
+## İçerik Tablosu
 
-- [Recommended Minimum](#recommended-minimum)
-- [Elements](#elements)
+- [Önerilenler Minimum](#onerilenler-minimum)
+- [Elementler](#elementler)
 - [Meta](#meta)
-  - [Meta: Not Recommended](#meta-not-recommended)
+  - [Meta: Önerilmeyenler](#meta-onerilmeyenler)
 - [Link](#link)
-  - [Link: Not Recommended](#link-not-recommended)
-  - [Favicons](#favicons)
-- [Social](#social)
+  - [Link: Önerilmeyenler](#link-onerilmeyenler)
+  - [Faviconlar](#faviconlar)
+- [Sosyal](#sosyal)
   - [Facebook / Open Graph](#facebook--open-graph)
   - [Facebook / Instant Articles](#facebook--instant-articles)
   - [Twitter](#twitter)
   - [Google+ / Schema.org](#google--schemaorg)
   - [OEmbed](#oembed)
-- [Browsers / Platforms](#browsers--platforms)
+- [Tarayıcılar / Platformlar](#browsers--platforms)
   - [Apple iOS](#apple-ios)
   - [Apple Safari](#apple-safari)
   - [Google Android](#google-android)
   - [Google Chrome](#google-chrome)
   - [Microsoft Internet Explorer](#microsoft-internet-explorer)
-  - [Microsoft Internet Explorer: Legacy, Do Not Use!](#microsoft-internet-explorer-legacy-do-not-use)
-- [Browsers (Chinese)](#browsers-chinese)
+  - [Microsoft Internet Explorer: Eski, Kullanma!](#microsoft-internet-explorer-eski-kullanma)
+- [Tarayıcılar (Çin)](#tarayicilar-chinese)
   - [360 Browser](#360-browser)
   - [QQ Mobile Browser](#qq-mobile-browser)
   - [UC Mobile Browser](#uc-mobile-browser)
-- [App Links](#app-links)
-- [Notes](#notes)
-  - [Performance](#performance)
-- [Other Resources](#other-resources)
-- [Related Projects](#related-projects)
-- [Other Formats](#other-formats)
-- [Translations](#translations)
-- [Contributing](#contributing)
-- [Author](#author)
-- [License](#license)
+- [Uygulama Linkleri](#uygulama-linkleri)
+- [Notlar](#notlar)
+  - [Performans](#performans)
+- [Diğer Kaynaklar](#diger-kaynaklar)
+- [İlgili Projeler](#ilgili-projeler)
+- [Diğer Formatlar](#diger-formatlar)
+- [Çeviriler](#ceviriler)
+- [Katkıda Bulun](#katkida-bulun)
+- [Yazar](#yazar)
+- [Lisans](#lisans)
 
-## Recommended Minimum
+## Önerilenler Minimum
 
-Below are the essential tags for basic, minimalist websites:
+Basit ve sade web siteleri için başlıca etiketler:
 
 ```html
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Page Title</title>
+<!-- Yukarıdaki 3 meta etiketi head bölümü içerisinde *ilk sırada* konumlanmalıdır; diğer head içerikleri bu etiketlerin *ardından* yerleştirilmelidir -->
+<title>Sayfa Başlığı</title>
 ```
 
-## Elements
+## Elementler
 
 ``` html
-<!-- Document Title -->
-<title>Page Title</title>
+<!-- Döküman Başlığı -->
+<title>Sayfa Başlığı</title>
 
-<!-- Base URL to use for all relative URLs contained within the document -->
+<!-- Base URL döküman içerisinde ilişkisel olarak girilmiş bağlantılar(relative path) için başlangıç noktası oluşturur -->
 <base href="https://example.com/page.html">
 
-<!-- External CSS -->
+<!-- Harici CSS -->
 <link rel="stylesheet" href="styles.css">
 
-<!-- In-document CSS -->
+<!-- Döküman içi CSS -->
 <style>
   /* ... */
 </style>
 
 <!-- JavaScript -->
 <script src="script.js"></script>
-<noscript><!--no JS alternative--></noscript>
+<noscript><!--JS olmaması halinde--></noscript>
 ```
 
 ## Meta
 
 ``` html
-<meta charset="utf-8"> <!-- set character encoding for the document -->
+<meta charset="utf-8"> <!-- Döküman için karakter kodlaması belirler -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<!-- Yukarıdaki 3 meta etiketi head bölümü içerisinde *ilk sırada* konumlanmalıdır; diğer head içerikleri bu taglerin *ardından* yerleştirilmelidir -->
 
-<!-- Allows control over where resources are loaded from -->
+<!-- Kaynakların nereden yükleneceğini kontrol eder -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-<!-- Place as early in the document as possible -->
-<!-- Only applies to content below this tag -->
+<!-- Döküman içerisinde olabildiğince önce konumlandırın -->
+<!-- Sadece bu etiketin altındaki içeriğe etki eder -->
 
-<!-- Name of web application (only should be used if the website is used as an app) -->
+<!-- Web uygulamasının adı (yalnızca web sayfası bir uygulamaysa kullanılmalı.) -->
 <meta name="application-name" content="Application Name">
 
-<!-- Short description of the page (limit to 150 characters) -->
-<!-- In *some* situations this description is used as a part of the snippet shown in the search results. -->
+<!-- Sayfanın kısa açıklaması (150 karakter ile sınırlıdır) -->
+<!-- *Bazı* durumlarda, bu açıklama arama sonuçları içerisinde sayfadan bir kesit olarak kullanılır -->
 <meta name="description" content="A description of the page">
 
-<!-- Control the behavior of search engine crawling and indexing -->
-<meta name="robots" content="index,follow,noodp"><!-- All Search Engines -->
-<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+<!-- Arama motorunun gezinme ve indeksleme davranışını belirler  -->
+<meta name="robots" content="index,follow,noodp"><!-- Bütün Arama Motorları -->
+<meta name="googlebot" content="index,follow"><!-- Google'a özgül -->
 
-<!-- Tells Google not to show the sitelinks search box -->
+<!-- Google'a sitelinks search boxı göstermemesini belirtir -->
 <meta name="google" content="nositelinkssearchbox">
 
-<!-- Tells Google not to provide a translation for this page -->
+<!-- Google'a bu sayfa için bir çeviri sağlamamsını belirtir -->
 <meta name="google" content="notranslate">
 
-<!-- Verify ownership for Google Search Console -->
+<!-- Google Search Console için site sahipliğini doğrular -->
 <meta name="google-site-verification" content="verification_token">
 
-<!-- Used to name software used to build the website (i.e. - WordPress, Dreamweaver) -->
+<!-- Web sitesini oluşturmak için kullanılan araç (örnek - WordPress, Dreamweaver) -->
 <meta name="generator" content="program">
 
-<!-- Short description of your site's subject -->
+<!-- Web sitenin konusunu ifade eden kısa açıklama -->
 <meta name="subject" content="your website's subject">
 
-<!-- Very short (10 words or less) description. Primarily for academic papers -->
+<!-- Çok kısa (10 kelime veya daha azı) açıklama. Genellikle akademik yayınlar için -->
 <meta name="abstract" content="">
 
-<!-- Full domain name or web address -->
+<!-- Web site adresinin tümü -->
 <meta name="url" content="https://example.com/">
 
 <meta name="directory" content="submission">
 
-<!-- Gives a general age rating based on sites content -->
+<!-- Web sitesinin içeriğini baz alınarak hedef kitlesini belirtir -->
 <meta name="rating" content="General">
 
-<!-- Allows control over how referrer information is passed -->
+<!-- Kaynak(referrer) bilgisinin nasıl iletileceğini belirtir -->
 <meta name="referrer" content="no-referrer">
 
-<!-- Disable automatic detection and formatting of possible phone numbers -->
+<!-- Uygun telefon numaraları için otomatik algılamayı ve biçimlendirmeyi iptal eder -->
 <meta name="format-detection" content="telephone=no">
 
-<!-- Completely opt out of DNS prefetching by setting to 'off' -->
+<!-- DNS ön tanımını tümden iptal eder -->
 <meta http-equiv="x-dns-prefetch-control" content="off">
 
-<!-- Stores cookie on the client web browser for client identification -->
+<!-- Tarayıcı tarafında kullanıcı ile ilgili çerez(cookie) oluşturmayı sağlar -->
 <meta http-equiv="set-cookie" content="name=value; expires=date; path=url">
 
-<!-- Specifies the page to appear in a specific frame -->
+<!-- Sayfanın spesifik bir çerçeve içerisinde açılması durumunu belirler  -->
 <meta http-equiv="Window-Target" content="_value">
 
-<!-- Geo tags -->
+<!-- Coğrafi etiketler -->
 <meta name="ICBM" content="latitude, longitude">
 <meta name="geo.position" content="latitude;longitude">
-<meta name="geo.region" content="country[-state]"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" -->
-<meta name="geo.placename" content="city/town"><!-- eg. content="New York City" -->
+<meta name="geo.region" content="country[-state]"><!-- Ülke kodu (ISO 3166-1): zorunlu, bölge kodu (ISO 3166-2): tercihen; örn. content="US" / content="US-NY" -->
+<meta name="geo.placename" content="city/town"><!-- örn. content="New York City" -->
 ```
 
-- [Meta tags that Google understands](https://support.google.com/webmasters/answer/79812?hl=en)
+- [Google'ın anladığı meta etiketler](https://support.google.com/webmasters/answer/79812?hl=tr)
 - [WHATWG Wiki: MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions)
-- [ICBM on Wikipedia](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
-- [Geotagging on Wikipedia](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
+- [Wikipedia'de ICBM](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
+- [Wikipedia'de Geotagging](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
 
-### Meta: Not Recommended
-Below are the meta attributes which are not recommended for use as they had low adoption rate, or have been deprecated:
+### Meta: Önerilmeyenler
+Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları için önerilmeyen meta özellikleri verilmiştir:
 
 ```html
-<!-- Used to declare the document language, but not well supported. Better to use <html lang=""> -->
+<!-- Belgenin dilini belirtmek için kullanılır fakat çok desteklenmez. <html lang=""> kullanmanız tavsiye edilir -->
 <meta name="language" content="en">
 
-<!-- Google disregards & Bing considers it an indicator of spam -->
+<!-- Google görmezden geliyor & Bing ise spam göstergesi olarak algılıyor -->
 <meta name="keywords" content="your,keywords,here,comma,separated,no,spaces">
-<!-- No evidence of current use in any search engines -->
+<!-- Herhangi bir arama motorunda kullanıldığına dair bir belirti yok -->
 <meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm">
 
-<!-- Provides an easy way for spam bots to harvest email addresses -->
+<!-- Spam botlarına kolay email kaynağı sağlıyor -->
 <meta name="reply-to" content="email@example.com">
 
-<!-- Better to use <link rel="author"> or humans.txt file -->
+<!--  <link rel="author"> ya da humans.txt dosyası kullanılması tavsiye edilir -->
 <meta name="author" content="name, email@example.com">
 <meta name="designer" content="">
 <meta name="owner" content="">
 
-<!-- Tells search bots to revisit the page after a period. This is not supported because most Search Engines now use random intervals for re-crawling a webpage -->
+<!-- Arama botlarına belli bir periyottan sonra yeniden ziyaret etmesini söyler. Fakat çoğu arama motoru, tarama periyotlarını kendi belirlediği için desteklenmiyor -->
 <meta name="revisit-after" content="7 days">
 
-<!-- Sends user to a new URL after a certain amount of time -->
-<!-- The W3C recommends that this tag not be used. Google recommends using a server-side 301 redirect instead. -->
+<!-- Belirli bir süreden sonra kullanıcıyı yeni bir URLe gönderir -->
+<!-- W3C bu etiketin kullanılmamasını, Google ise sunucu taraflı  301 yönlendirmesini tavsiye eder -->
 <meta http-equiv="refresh" content="300; url=https://example.com/">
 
-<!-- Describes the topic of the website -->
+<!-- Web sitenin konusunu belirtir -->
 <meta name="topic" content="">
 
-<!-- Brief summary of the company or purpose of the website -->
+<!-- Şirketin kısa özeti veya web sitesinin amacı -->
 <meta name="summary" content="">
 
-<!-- A deprecated tag that does the same as the keywords meta tag -->
+<!-- Kullanımdan kalkan, keywords meta etiketi ile aynı işe yarayan bir etiket -->
 <meta name="classification" content="business">
 
-<!-- Does the same as URL, older and not supported -->
+<!-- URLin variantı, daha eski ve desteklenmiyor -->
 <meta name="identifier-URL" content="https://example.com/">
 
-<!-- Similar function to the keywords tag -->
+<!-- Keywords meta etiketi ile benzer özellikte -->
 <meta name="category" content="">
 
-<!-- Makes sure your website shows up in all countries and languages -->
+<!-- Web sitenin bütün ülkeleri ve dilleri kapsadığını teyid eder -->
 <meta name="coverage" content="Worldwide">
 
-<!-- Does the same as the coverage tag -->
+<!-- coverage etiketi ile aynı -->
 <meta name="distribution" content="Global">
 
-<!-- Controls what user can access on the internet -->
+<!-- Hangi kullanıcının internete erişebileceğini kontrol eder* -->
 <meta http-equiv="Pics-label" content="value">
 
-<!-- Cache Control -->
-<!-- Better to configure cache control server side -->
+<!-- Cache Kontrolü -->
+<!-- Cache kontrolünü sunucu tarafında sağlamak tercih edilmelidir -->
 <meta http-equiv="Expires" content="0">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="no-cache">
@@ -211,72 +211,72 @@ Below are the meta attributes which are not recommended for use as they had low 
 ## Link
 
 ``` html
-<!-- Helps prevent duplicate content issues -->
+<!-- Yinelenen içerik sorunlarını önlemeye yardımcı olur -->
 <link rel="canonical" href="https://example.com/2010/06/9-things-to-do-before-entering-social-media.html">
 
-<!-- Used to be included before the icon link, but is deprecated and no longer is used -->
+<!-- İkon bağlantısından önce eklenirdi, ancak kullanımdan kaldırıldı -->
 <link rel="shortlink" href="https://example.com/?p=42">
 
-<!-- Links to an AMP HTML version of the current document -->
+<!--Mevcut sayfanın AMP HTML versiyonuna ait linki belirtir -->
 <link rel="amphtml" href="https://example.com/path/to/amp-version.html">
 
-<!-- Points to a CSS stylesheet -->
+<!-- CSS stil dosyasını işaret eder -->
 <link rel="stylesheet" href="https://example.com/styles.css">
 
-<!-- Links to a JSON file that specifies "installation" credentials for web applications -->
+<!-- Web uygulamaları için "kurulum" kimlik bilgilerini belirten bir JSON dosyasını tanımlar -->
 <link rel="manifest" href="manifest.json">
 
-<!-- Links to the author of the document -->
+<!-- Belgenin yaratıcısını belirtir -->
 <link rel="author" href="humans.txt">
 
-<!-- Refers to a copyright statement that applies to the links context -->
+<!-- Telif hakkı bilidirimini açıklayan bağlantıyı işaret eder -->
 <link rel="copyright" href="copyright.html">
 
-<!-- Gives a reference to a location in your document that may be in another language -->
+<!-- Belgenin başka bir dildeki  bağlantısına refere eder -->
 <link rel="alternate" href="https://es.example.com/" hreflang="es">
 
-<!-- Gives information about an author or another person -->
+<!-- Yaratıcı veya başka biri hakkında bilgi verir  -->
 <link rel="me" href="https://google.com/profiles/thenextweb" type="text/html">
 <link rel="me" href="mailto:name@example.com">
 <link rel="me" href="sms:+15035550125">
 
-<!-- Links to a document that contains an archive link to the current document -->
+<!-- Geçerli belgenin arşiv bağlantısını içeren başka bir belgeye işaret eder -->
 <link rel="archives" href="https://example.com/2003/05/" title="May 2003">
 
-<!-- Links to top level resource in an hierarchical structure -->
+<!-- Bir hiyerarşik yapı içerisinde en üst seviyedeki kaynağa işaret eder -->
 <link rel="index" href="https://example.com/" title="DeWitt Clinton">
 
-<!-- Gives the starting point of the document -->
+<!-- Dokümanın başlangıç noktasını verir -->
 <link rel="start" href="https://example.com/photos/pattern_recognition_1_about/" title="Pattern Recognition 1">
 
-<!-- Leads to the preceding resource of the sequence the current document is in -->
+<!-- Geçerli belgenin bulunduğu sıradaki önceki kaynağa yönlendirir -->
 <link rel="prev" href="https://example.com/opensearch/opensearch-and-openid-a-sure-way-to-get-my-attention/" title="OpenSearch and OpenID? A sure way to get my attention.">
 
-<!-- Gives a self reference - useful when the document has multiple possible references -->
+<!-- Kendine referans verir - döküman birden fazla referansa sahip olduğunda faydalıdır -->
 <link rel="self" type="application/atom+xml" href="https://example.com/atomFeed.php?page=3">
 
-<!-- The first, next, previous, and last documents in a series of documents, respectively -->
+<!-- Bir dizi belgede sırasıyla ilk, bir sonraki, bir önceki ve son sıradaki belgeleri işaret eder -->
 <link rel="first" href="https://example.com/atomFeed.php">
 <link rel="next" href="https://example.com/atomFeed.php?page=4">
 <link rel="previous" href="https://example.com/atomFeed.php?page=2">
 <link rel="last" href="https://example.com/atomFeed.php?page=147">
 
-<!-- Used when using a 3rd party service to maintain a blog -->
+<!-- Üçüncü taraf servislerden blog hizmeti sağlantığında kullanılır  -->
 <link rel="EditURI" href="https://example.com/xmlrpc.php?rsd" type="application/rsd+xml" title="RSD">
 
-<!-- Forms an automated comment when another WordPress blog links to your WordPress blog or post -->
+<!-- Başka bir WordPress gönderisi sizin blogunuza veya gönderinize bağlantı verdiğinde otomatik bir ping oluşturur -->
 <link rel="pingback" href="https://example.com/xmlrpc.php">
 
-<!-- Notifies a url when you link to it on your site -->
+<!-- Başka bir web sayfası sizin sayfanıza bağlantı verdiğinde bilgilendirdiği bağlantıyı işaret eder -->
 <link rel="webmention" href="https://example.com/webmention">
 
-<!-- Loads in an external HTML file into the current HTML file -->
+<!-- Harici bir HTML belgesini mevcut olan HTML belgesine dahil eder -->
 <link rel="import" href="component.html">
 
 <!-- Open Search -->
 <link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="Search Title">
 
-<!-- Feeds -->
+<!-- Akışlar -->
 <link rel="alternate" href="https://feeds.feedburner.com/example" type="application/rss+xml" title="RSS">
 <link rel="alternate" href="https://example.com/feed.atom" type="application/atom+xml" title="Atom 0.3">
 
@@ -286,38 +286,38 @@ Below are the meta attributes which are not recommended for use as they had low 
 <link rel="prefetch" href="https://www.example.com/">
 <link rel="prerender" href="https://example.com/">
 <link rel="preload" href="image.png" as="image">
-<!-- More info: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+<!-- Detaylı bilgi: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
 ```
 
-### Link: Not Recommended
-Below are the link relations which are not recommended for use:
+### Link: Önerilmeyenler
+Aşağıda, önerilmeyen link bağıntıları verilmiştir:
 
 ```html
 <link rel="shortcut icon" href="path/to/favicon.ico">
 
-<!-- Not useful, proprietary and buggy, see https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Y_2eFRh9BOs/gULYapoRBwAJ -->
+<!-- Kullanışlı değil ve hatalı, inceleyin: https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Y_2eFRh9BOs/gULYapoRBwAJ -->
 <link rel="subresource" href="styles.css">
 ```
 
-### Favicons
+### Faviconlar
 
 ``` html
-<!-- For IE 10 and below -->
-<!-- No link, just place a file called favicon.ico in the root directory -->
+<!-- IE 10 ve altı için -->
+<!-- Link yok, sadece favicon.ico isminde bir dosyayı kök dizinine yerleştirin -->
 
-<!-- For IE 11, Chrome, Firefox, Safari, Opera -->
+<!-- IE 11, Chrome, Firefox, Safari, Opera için -->
 <link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
 <link rel="icon" href="path/to/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="path/to/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="path/to/favicon-62.png" sizes="62x62" type="image/png">
 <link rel="icon" href="path/to/favicon-192.png" sizes="192x192" type="image/png">
-<!-- More info: https://bitsofco.de/all-about-favicons-and-touch-icons/ -->
+<!-- Detaylı bilgi: https://bitsofco.de/all-about-favicons-and-touch-icons/ -->
 ```
 
-- [All About Favicons (And Touch Icons)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
-- [Favicon Cheat Sheet](https://github.com/audreyr/favicon-cheat-sheet)
+- [Faviconlar Hakkında Her Şey (Ve Touch İkonlar)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
+- [Favicon Kopya Kağıdı](https://github.com/audreyr/favicon-cheat-sheet)
 
-## Social
+## Sosyal
 
 ### Facebook / Open Graph
 
@@ -335,8 +335,8 @@ Below are the link relations which are not recommended for use:
 <!-- Open Graph: http://ogp.me/ -->
 ```
 
-- [Facebook Open Graph Markup](https://developers.facebook.com/docs/sharing/webmasters#markup)
-- [Open Graph protocol](http://ogp.me/)
+- [Facebook Open Graph İşaretlemesi](https://developers.facebook.com/docs/sharing/webmasters#markup)
+- [Open Graph protokolü](http://ogp.me/)
 
 ### Facebook / Instant Articles
 
@@ -344,15 +344,15 @@ Below are the link relations which are not recommended for use:
 <meta charset="utf-8">
 <meta property="op:markup_version" content="v1.0">
 
-<!-- The URL of the web version of your article -->
+<!-- Makalenizin web versiyonunun bağlantısı -->
 <link rel="canonical" href="http://example.com/article.html">
 
-<!-- The style to be used for this article -->
+<!-- Mevcut makale için kullanılacak stil -->
 <meta property="fb:article_style" content="myarticlestyle">
 ```
 
-- [Facebook Instant Articles: Creating Articles](https://developers.facebook.com/docs/instant-articles/guides/articlecreate)
-- [Instant Articles: Format Reference](https://developers.facebook.com/docs/instant-articles/reference)
+- [Facebook Anlık Makaleler: Makale Oluşturma](https://developers.facebook.com/docs/instant-articles/guides/articlecreate)
+- [Anlık Makaleler: Biçimlendirme Belgesi](https://developers.facebook.com/docs/instant-articles/reference)
 
 ### Twitter
 
@@ -364,12 +364,12 @@ Below are the link relations which are not recommended for use:
 <meta name="twitter:title" content="Content Title">
 <meta name="twitter:description" content="Content description less than 200 characters">
 <meta name="twitter:image" content="https://example.com/image.jpg">
-<!-- More info: https://dev.twitter.com/cards/getting-started -->
-<!-- Validate: https://dev.twitter.com/docs/cards/validation/validator -->
+<!-- Detaylı bilgi: https://dev.twitter.com/cards/getting-started -->
+<!-- Doğrulama: https://dev.twitter.com/docs/cards/validation/validator -->
 ```
 
-- [Twitter Cards: Getting Started Guide](https://dev.twitter.com/cards/getting-started)
-- [Twitter Card Validator](https://cards-dev.twitter.com/validator)
+- [Twitter Kartları: Başlangıç Rehberi](https://dev.twitter.com/cards/getting-started)
+- [Twitter Kart Doğrulayıcısı](https://cards-dev.twitter.com/validator)
 
 ### Google+ / Schema.org
 
@@ -382,10 +382,10 @@ Below are the link relations which are not recommended for use:
 
 ### Pinterest
 
-Pinterest lets you prevent people from saving things from your website, according [to their help center](https://help.pinterest.com/en/articles/prevent-people-saving-things-pinterest-your-site). The `description` is optional.
+Pinterest, [yardım merkezine](https://help.pinterest.com/en/articles/prevent-people-saving-things-pinterest-your-site) göre insanların web sitenizdeki içerikleri kaydetmesini önlemenize olanak sağlar. `description` zorunlu değildir.
 
 ``` html
-<meta name="pinterest" content="nopin" description="Sorry, you can't save from my website!">
+<meta name="pinterest" content="nopin" description="Üzgümüm, benim sitemden kaydedemezsiniz!">
 ```
 
 ### OEmbed
@@ -401,7 +401,7 @@ Pinterest lets you prevent people from saving things from your website, accordin
 
 - [oEmbed format](http://oembed.com/)
 
-## Browsers / Platforms
+## Tarayıcılar / Platformlar
 
 ### Apple iOS
 
@@ -409,41 +409,41 @@ Pinterest lets you prevent people from saving things from your website, accordin
 <!-- Smart App Banner -->
 <meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
 
-<!-- Disable automatic detection and formatting of possible phone numbers -->
+<!-- Uygun telefon numaraları için otomatik algılamayı ve biçimlendirmeyi iptal eder -->
 <meta name="format-detection" content="telephone=no">
 
-<!-- Add to Home Screen -->
+<!-- Ana Ekran'a ekle -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="App Title">
+<meta name="apple-mobile-web-app-title" content="Uygulama Başlığı">
 
-<!-- Touch Icons -->
+<!-- Touch İkonlar -->
 <link rel="apple-touch-icon" href="path/to/apple-touch-icon.png">
-<link rel="apple-touch-icon-precomposed" href="path/to/apple-touch-icon-precomposed.png">
-<!-- iOS 8+ no longer support precomposed, only apple-touch-icon is required -->
+<link rel="apple-touch-icon-precomposed" href="path/to/apple-touch-icon-sikistirilmamis.png">
+<!-- iOS 8+ artık precomposed desteklemiyor, yalnızca apple-touch-icon zorunlu -->
 
-<!-- In most cases, one 180×180px touch icon in the head is enough -->
-<!-- Utilize the different icon sizes if you would want unique icons -->
-<!-- determined by device. -->
+<!-- Birçok durum için head alanında bir 180×180px touch ikon yeterli -->
+<!-- Cihaz tarafından belirlenen benzersiz simgeler istiyorsanız -->
+<!-- farklı simge boyutlarından yararlanın -->
 <link rel="apple-touch-icon" sizes="57x57" href="path/to/icon@57.png">
 <link rel="apple-touch-icon" sizes="72x72" href="path/to/icon@72.png">
 <link rel="apple-touch-icon" sizes="114x114" href="path/to/icon@114.png">
 <link rel="apple-touch-icon" sizes="144x144" href="path/to/icon@144.png">
 
-<!-- Startup Image ( Deprecated ) -->
+<!-- Başlangıç Görseli ( Kullanımdan kaldırıldı ) -->
 <link rel="apple-touch-startup-image" href="path/to/startup.png">
 
-<!-- iOS app deep linking -->
+<!-- iOS derin uygulama bağlantısı(deep linking) -->
 <meta name="apple-itunes-app" content="app-id=APP-ID, app-argument=http/url-sample.com">
 <link rel="alternate" href="ios-app://APP-ID/http/url-sample.com">
 ```
 
-- [Apple Meta Tags](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
+- [Apple Meta Etiketleri](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
 
 ### Apple Safari
 
 ```html
-<!-- Pinned Site -->
+<!-- Sabitlenmiş(pinned) Site -->
 <link rel="mask-icon" href="path/to/icon.svg" color="red">
 ```
 
@@ -452,11 +452,11 @@ Pinterest lets you prevent people from saving things from your website, accordin
 ``` html
 <meta name="theme-color" content="#E64545">
 
-<!-- Add to home screen -->
+<!-- Ana ekrana ekle -->
 <meta name="mobile-web-app-capable" content="yes">
-<!-- More info: https://developer.chrome.com/multidevice/android/installtohomescreen -->
+<!-- Detaylı bilgi: https://developer.chrome.com/multidevice/android/installtohomescreen -->
 
-<!-- Android app deep linking -->
+<!-- Android derin uygulama bağlantısı(deep linking) -->
 <meta name="google-play-app" content="app-id=package-name">
 <link rel="alternate" href="android-app://package-name/http/url-sample.com">
 ```
@@ -466,30 +466,30 @@ Pinterest lets you prevent people from saving things from your website, accordin
 ``` html
 <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/APP_ID">
 
-<!-- Disable translation prompt -->
+<!-- Çeviri istemini devre dışı bırak -->
 <meta name="google" value="notranslate">
 ```
-### Google Chrome Mobile (Android Only)
+### Google Chrome Mobil (Yalnızca Android)
 
-Since Chrome 31, you can set up your web app to "app mode" like Safari.
+Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama modu" olarak ayarlayabilirsiniz.
 
 ``` html
-<!-- Link to a manifest and define the manifest metadata. -->
-<!-- The example of manifest.json could be found in the link below. -->
+<!-- manifest dosya bağlantısını ve meta bilgisini tanımlar -->
+<!-- manifest.json örneği aşağıdaki bağlantıdan bulunabilir -->
 <link rel="manifest" href="manifest.json">
 
-<!-- Define your web page as a web app -->
+<!-- Web sayfanızı web uygulaması olarak tanımlar -->
 <meta name="mobile-web-app-capable" content="yes">
 
-<!-- The first one is the official recommended format.  -->
+<!-- Birincisi önerilen, resmi formatta olanıdır  -->
 <link rel="icon" sizes="192x192" href="nice-highres.png">
 <link rel="icon" sizes="128x128" href="niceicon.png">
-<!-- Formats with Apple prefix will be deprecated. -->
+<!-- Apple önekli biçimindekilerin kullanımı kaldırılacaktır -->
 <link rel="apple-touch-icon" sizes="128x128" href="niceicon.png">
 <link rel="apple-touch-icon-precomposed" sizes="128x128" href="niceicon.png">
 ```
 
-[Google Developer](https://developer.chrome.com/multidevice/android/installtohomescreen)
+[Google Geliştiricisi](https://developer.chrome.com/multidevice/android/installtohomescreen)
 
 ### Microsoft Internet Explorer
 
@@ -498,10 +498,10 @@ Since Chrome 31, you can set up your web app to "app mode" like Safari.
 <meta http-equiv="cleartype" content="on">
 <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
 
-<!-- Disable link highlighting on IE 10 on Windows Phone (https://blogs.windows.com/buildingapps/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10/) -->
+<!-- Windows Phone üzerindeki IE 10'da bağlantı vurgulamasını kaldırır (https://blogs.windows.com/buildingapps/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10/) -->
 <meta name="msapplication-tap-highlight" content="no">
 
-<!-- Pinned sites (https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx) -->
+<!-- Sabitlenmiş(pinned) siteler (https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx) -->
 <meta name="application-name" content="Contoso Pinned Site Caption">
 <meta name="msapplication-tooltip" content="Example Tooltip Text">
 <meta name="msapplication-starturl" content="/">
@@ -524,19 +524,19 @@ Since Chrome 31, you can set up your web app to "app mode" like Safari.
 <meta name="msapplication-window" content="width=1024;height=768">
 ```
 
-### Microsoft Internet Explorer: Legacy, Do Not Use!
+### Microsoft Internet Explorer: Eski, Kullanmayın!
 
 ``` html
-<!-- Disable the image toolbar when you mouse over images in IE 6 (https://msdn.microsoft.com/en-us/library/ms532986(v=vs.85).aspx) -->
+<!-- IE 6'da görsele tıklandığında çıkan, resim araç çubuğunu devre dışı bırakır (https://msdn.microsoft.com/en-us/library/ms532986(v=vs.85).aspx) -->
 <meta http-equiv="imagetoolbar" content="no">
 
-<!-- Disable Windows theming to form inputs/buttons (https://support.microsoft.com/en-us/kb/322240) -->
+<!-- Form elemanlarından(input/buton) windows temasını kaldırır (https://support.microsoft.com/en-us/kb/322240) -->
 <meta name="MSThemeCompatible" content="no">
 
-<!-- Disable a feature that only appeared on IE 6 beta (https://stackoverflow.com/q/2167301) -->
+<!-- Yalnızca IE 6 beta üzerinde olan özelliği kaldırır (https://stackoverflow.com/q/2167301) -->
 <meta name="MSSmartTagsPreventParsing" content="true">
 
-<!-- Interpage Transitions (https://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx) -->
+<!-- Sayfalar Ararası Geçişler (https://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx) -->
 <meta http-equiv="Page-Enter" content="revealtrans(duration=2,transition=2)">
 <meta http-equiv="Page-Exit" content="revealtrans(duration=3,transition=12)">
 <meta http-equiv="Site-Enter" content="revealtrans(duration=2,transition=2)">
@@ -556,108 +556,108 @@ Since Chrome 31, you can set up your web app to "app mode" like Safari.
 <meta property="al:android:package" content="org.applinks">
 <!-- Web Fallback -->
 <meta property="al:web:url" content="http://applinks.org/documentation">
-<!-- More info: http://applinks.org/documentation/ -->
+<!-- Detaylı bilgi: http://applinks.org/documentation/ -->
 ```
 
-- [App Links Docs](http://applinks.org/documentation/)
+- [App Links Dökümantasyonu](http://applinks.org/documentation/)
 
-## Browsers (Chinese)
+## Browsers (Çin)
 
 ### 360 Browser
 
 ``` html
-<!-- select rendering engine in order -->
+<!-- Sırasıyla render motoru seçer -->
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
 ```
 
 ### QQ Mobile Browser
 
 ``` html
-<!-- Locks the screen into the specified orientation -->
+<!-- Ekranı belirtilen yönde sabitler -->
 <meta name="x5-orientation" content="landscape/portrait">
-<!-- Display this page in fullscreen -->
+<!-- Mevcut sayfayı tam ekranda görüntüler -->
 <meta name="x5-fullscreen" content="true">
-<!-- Page will be displayed in "application mode"(fullscreen,etc.) -->
+<!-- Sayfa "uygulama modu"nda görüntülenir (tam ekran, vb.) -->
 <meta name="x5-page-mode" content="app">
 ```
 
 ### UC Mobile Browser
 
 ``` html
-<!-- Locks the screen into the specified orientation -->
+<!-- Ekranı belirtilen yönde sabitler -->
 <meta name="screen-orientation" content="landscape/portrait">
-<!-- Display this page in fullscreen -->
+<!-- Mevcut sayfayı tam ekranda görüntüler -->
 <meta name="full-screen" content="yes">
-<!-- UC browser will display images even if in "text mode" -->
+<!-- UC browser "metin modu"nda olsa bile görselleri gösterir -->
 <meta name="imagemode" content="force">
-<!-- Page will be displayed in "application mode"(fullscreen,forbiding gesture, etc.) -->
+<!-- Sayfa "uygulama modu"nda görüntülenir(tam ekran, hareketi yasaklamak, vb.) -->
 <meta name="browsermode" content="application">
-<!-- Disabled the UC browser's "night mode" in this page -->
+<!-- UC browser'ın "gece modu"nu mevcut sayfada iptal eder -->
 <meta name="nightmode" content="disable">
-<!-- Simplify the page to reduce data transfer -->
+<!-- Data transferini azaltmak için sayfayı basitleştirir -->
 <meta name="layoutmode" content="fitscreen">
-<!-- Disable the UC browser's feature of "scaling font up when there are many words in this page" -->
+<!-- UC browser'ın "sayfada çok fazla kelime olduğunda font büyütme özelliği"ni iptal eder -->
 <meta name="wap-font-scale" content="no">
 ```
 
-- [UC Browser Docs](http://www.uc.cn/download/UCBrowser_U3_API.doc)
+- [UC Browser Dökümantasyonu](http://www.uc.cn/download/UCBrowser_U3_API.doc)
 
-## Notes
+## Notlar
 
-### Performance
-Moving the `href` attribute to the beginning of an element improves compression when GZIP is enabled, because the `href` attribute is used in `a`, `base` and `link` tags.
+### Performans
+`href` özelliğini bir elementin başına taşımak, GZIP aktifken sıkıştırma performansını arttırır.
 
-Example:
+Örnek:
 
 ``` html
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 ```
 
-## Other Resources
+## Diğer Kaynaklar
 
-- [HTML5 Boilerplate Docs: The HTML](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md)
-- [HTML5 Boilerplate Docs: Extend and customize](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md)
+- [HTML5 Boilerplate Dökümantasyonu: HTML](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md)
+- [HTML5 Boilerplate Dökümantasyonu: Genişlet ve özelleştir](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md)
 
-## Related Projects
+## İlgili Projeler
 
 - [Atom HTML Head Snippets](https://github.com/joshbuchea/atom-html-head-snippets) - Atom package for `HEAD` snippets
 - [Sublime Text HTML Head Snippets](https://github.com/marcobiedermann/sublime-head-snippets) - Sublime Text package for `HEAD` snippets
 - [head-it](https://github.com/hemanth/head-it) - CLI interface for `HEAD` snippets
 - [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the `HEAD` tag for Vue.js
 
-## Other Formats
+## Diğer Formatlar
 
 - [PDF](https://gitprint.com/joshbuchea/HEAD/blob/master/README.md)
 
-## Translations
+## Çeviriler
 
 - [Brazilian Portuguese](https://github.com/Webschool-io/HEAD)
 - [Chinese (Simplified)](https://github.com/Amery2010/HEAD)
 - [Italian](https://github.com/Fakkio/HEAD)
 - [Japanese](http://coliss.com/articles/build-websites/operation/work/collection-of-html-head-elements.html)
 - [Russian/Русский](https://github.com/Konfuze/HEAD)
+- [Turkish/Türkçe](https://github.com/mkg0/HEAD)
 
-## Contributing
+## Katkıda Bulun
 
-Open an issue or a pull request to suggest changes or additions.
+Düzenleme veya ilave önermek için bir issue açın ya da pull request gönderin.
+Lütfen pull requestler için şu adımları izleyin:
 
-Please follow these steps for pull requests:
+- Bir kerede yalnıza bir etiket, veya ilişkili olan bir etiket grubu düzenleyin
+- Özelliklerde çift tırnak kullanın
+- Kapatma etiketi olmayan elementlere ters eğik çizgi eklemeyin - HTML 5 tanımları opsiyonel olduğunu belirtiyor
+- Değişikliğinizi destekleyecek bir dökümantasyon bağlantısı eklemeyi düşünün
 
-- Modify only one tag, or one related set of tags at a time
-- Use double quotes on attributes
-- Don't include a trailing slash in self-closing elements — the HTML5 spec says they're optional
-- Consider including a link to documentation that supports your change
+### Katkıda Bulunanlar
 
-### Contributors
+Katkıda bulunan bu muhteşem ötesi insanlara [göz gezdirin](https://github.com/joshbuchea/HEAD/graphs/contributors).
 
-Check out all the super awesome [contributors](https://github.com/joshbuchea/HEAD/graphs/contributors).
-
-## Author
+## Yazar
 
 **[Josh Buchea](http://joshbuchea.com/)**
 
-## License
+## Lisans
 
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, [Josh Buchea](http://joshbuchea.com) has waived all copyright and related or neighboring rights to this work.
+Yasalar dahilinde mümkün olduğunca, [Josh Buchea](http://joshbuchea.com) bu eserle ilgili tüm telif hakkı ve benzeri haklardan feragat etmiştir.
