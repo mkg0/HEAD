@@ -100,7 +100,7 @@ Basit ve sade web siteleri için başlıca etiketler:
 <!-- Google'a sitelinks search boxı göstermemesini belirtir -->
 <meta name="google" content="nositelinkssearchbox">
 
-<!-- Google'a bu sayfa için bir çeviri sağlamamsını belirtir -->
+<!-- Google'a bu sayfa için bir çeviri sağlamamasını belirtir -->
 <meta name="google" content="notranslate">
 
 <!-- Google Search Console için site sahipliğini doğrular -->
@@ -120,7 +120,7 @@ Basit ve sade web siteleri için başlıca etiketler:
 
 <meta name="directory" content="submission">
 
-<!-- Web sitesinin içeriğini baz alınarak hedef kitlesini belirtir -->
+<!-- Web site içeriğinin hitap ettiği kitleyi belirtir -->
 <meta name="rating" content="General">
 
 <!-- Kaynak(referrer) bilgisinin nasıl iletileceğini belirtir -->
@@ -170,7 +170,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <meta name="designer" content="">
 <meta name="owner" content="">
 
-<!-- Arama botlarına belli bir periyottan sonra yeniden ziyaret etmesini söyler. Fakat çoğu arama motoru, tarama periyotlarını kendi belirlediği için desteklenmiyor -->
+<!-- Arama botlarına belli bir periyottan sonra yeniden ziyaret etmesini belirtir. Fakat çoğu arama motoru, tarama periyotlarını kendi belirlediği için desteklenmiyor -->
 <meta name="revisit-after" content="7 days">
 
 <!-- Belirli bir süreden sonra kullanıcıyı yeni bir URLe gönderir -->
@@ -186,7 +186,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <!-- Kullanımdan kalkan, keywords meta etiketi ile aynı işe yarayan bir etiket -->
 <meta name="classification" content="business">
 
-<!-- URLin variantı, daha eski ve desteklenmiyor -->
+<!-- URLin variantı. Daha eski ve desteklenmiyor -->
 <meta name="identifier-URL" content="https://example.com/">
 
 <!-- Keywords meta etiketi ile benzer özellikte -->
@@ -232,7 +232,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <!-- Telif hakkı bilidirimini açıklayan bağlantıyı işaret eder -->
 <link rel="copyright" href="copyright.html">
 
-<!-- Belgenin başka bir dildeki  bağlantısına refere eder -->
+<!-- Belgenin başka bir dildeki bağlantısına refere eder -->
 <link rel="alternate" href="https://es.example.com/" hreflang="es">
 
 <!-- Yaratıcı veya başka biri hakkında bilgi verir  -->
@@ -246,7 +246,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <!-- Bir hiyerarşik yapı içerisinde en üst seviyedeki kaynağa işaret eder -->
 <link rel="index" href="https://example.com/" title="DeWitt Clinton">
 
-<!-- Dokümanın başlangıç noktasını verir -->
+<!-- Dokümanın başlangıç noktasını işaret eder -->
 <link rel="start" href="https://example.com/photos/pattern_recognition_1_about/" title="Pattern Recognition 1">
 
 <!-- Geçerli belgenin bulunduğu sıradaki önceki kaynağa yönlendirir -->
@@ -643,7 +643,7 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 Düzenleme veya ilave önermek için bir issue açın ya da pull request gönderin.
 Lütfen pull requestler için şu adımları izleyin:
 
-- Bir kerede yalnıza bir etiket, veya ilişkili olan bir etiket grubu düzenleyin
+- Tek seferde yalnıza bir etiket veya ilişkili olan bir etiket grubu düzenleyin
 - Özelliklerde çift tırnak kullanın
 - Kapatma etiketi olmayan elementlere ters eğik çizgi eklemeyin - HTML 5 tanımları opsiyonel olduğunu belirtiyor
 - Değişikliğinizi destekleyecek bir dökümantasyon bağlantısı eklemeyi düşünün
