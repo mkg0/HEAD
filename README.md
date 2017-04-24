@@ -10,11 +10,11 @@ Sayfanızın `<head>` bölümü içerisine girebilecek her şeyin listesi
   - [Meta: Önerilmeyenler](#meta-onerilmeyenler)
 - [Link](#link)
   - [Link: Önerilmeyenler](#link-onerilmeyenler)
-  - [Faviconlar](#faviconlar)
+  - [Favori Simgeleri](#favori-simgeleri)
 - [Sosyal](#sosyal)
-  - [Facebook / Open Graph](#facebook--open-graph)
-  - [Facebook / Instant Articles](#facebook--instant-articles)
-  - [Twitter](#twitter)
+  - [Facebook Open Graph](#facebook-open-graph)
+  - [Facebook Instant Articles](#facebook-instant-articles)
+  - [Twitter Cards](#twitter-cards)
   - [Google+ / Schema.org](#google--schemaorg)
   - [OEmbed](#oembed)
 - [Tarayıcılar / Platformlar](#browsers--platforms)
@@ -23,7 +23,6 @@ Sayfanızın `<head>` bölümü içerisine girebilecek her şeyin listesi
   - [Google Android](#google-android)
   - [Google Chrome](#google-chrome)
   - [Microsoft Internet Explorer](#microsoft-internet-explorer)
-  - [Microsoft Internet Explorer: Eski, Kullanma!](#microsoft-internet-explorer-eski-kullanma)
 - [Tarayıcılar (Çin)](#tarayicilar-chinese)
   - [360 Browser](#360-browser)
   - [QQ Mobile Browser](#qq-mobile-browser)
@@ -36,6 +35,7 @@ Sayfanızın `<head>` bölümü içerisine girebilecek her şeyin listesi
 - [Diğer Formatlar](#diger-formatlar)
 - [Çeviriler](#ceviriler)
 - [Katkıda Bulun](#katkida-bulun)
+- [Katkıda Bulunanlar](#katkida-bulunanlar)
 - [Yazar](#yazar)
 - [Lisans](#lisans)
 
@@ -112,14 +112,6 @@ Basit ve sade web siteleri için başlıca etiketler:
 <!-- Web sitenin konusunu ifade eden kısa açıklama -->
 <meta name="subject" content="your website's subject">
 
-<!-- Çok kısa (10 kelime veya daha azı) açıklama. Genellikle akademik yayınlar için -->
-<meta name="abstract" content="">
-
-<!-- Web site adresinin tümü -->
-<meta name="url" content="https://example.com/">
-
-<meta name="directory" content="submission">
-
 <!-- Web site içeriğinin hitap ettiği kitleyi belirtir -->
 <meta name="rating" content="General">
 
@@ -154,9 +146,6 @@ Basit ve sade web siteleri için başlıca etiketler:
 Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları için önerilmeyen meta özellikleri verilmiştir:
 
 ```html
-<!-- Belgenin dilini belirtmek için kullanılır fakat çok desteklenmez. <html lang=""> kullanmanız tavsiye edilir -->
-<meta name="language" content="en">
-
 <!-- Google görmezden geliyor & Bing ise spam göstergesi olarak algılıyor -->
 <meta name="keywords" content="your,keywords,here,comma,separated,no,spaces">
 <!-- Herhangi bir arama motorunda kullanıldığına dair bir belirti yok -->
@@ -299,7 +288,7 @@ Aşağıda, önerilmeyen link bağıntıları verilmiştir:
 <link rel="subresource" href="styles.css">
 ```
 
-### Faviconlar
+### Favori Simgeleri
 
 ``` html
 <!-- IE 10 ve altı için -->
@@ -314,12 +303,12 @@ Aşağıda, önerilmeyen link bağıntıları verilmiştir:
 <!-- Detaylı bilgi: https://bitsofco.de/all-about-favicons-and-touch-icons/ -->
 ```
 
-- [Faviconlar Hakkında Her Şey (Ve Touch İkonlar)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
-- [Favicon Kopya Kağıdı](https://github.com/audreyr/favicon-cheat-sheet)
+- [Favori Simgeleri Hakkında Her Şey (Ve Touch Simgeler)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
+- [Favori Simgeleri Kopya Kağıdı](https://github.com/audreyr/favicon-cheat-sheet)
 
 ## Sosyal
 
-### Facebook / Open Graph
+### Facebook Open Graph
 
 ``` html
 <meta property="fb:app_id" content="123456789">
@@ -338,7 +327,7 @@ Aşağıda, önerilmeyen link bağıntıları verilmiştir:
 - [Facebook Open Graph İşaretlemesi](https://developers.facebook.com/docs/sharing/webmasters#markup)
 - [Open Graph protokolü](http://ogp.me/)
 
-### Facebook / Instant Articles
+### Facebook Instant Articles
 
 ``` html
 <meta charset="utf-8">
@@ -354,7 +343,7 @@ Aşağıda, önerilmeyen link bağıntıları verilmiştir:
 - [Facebook Anlık Makaleler: Makale Oluşturma](https://developers.facebook.com/docs/instant-articles/guides/articlecreate)
 - [Anlık Makaleler: Biçimlendirme Belgesi](https://developers.facebook.com/docs/instant-articles/reference)
 
-### Twitter
+### Twitter Cards
 
 ``` html
 <meta name="twitter:card" content="summary">
@@ -422,7 +411,7 @@ Pinterest, [yardım merkezine](https://help.pinterest.com/en/articles/prevent-pe
 <link rel="apple-touch-icon-precomposed" href="path/to/apple-touch-icon-sikistirilmamis.png">
 <!-- iOS 8+ artık precomposed desteklemiyor, yalnızca apple-touch-icon zorunlu -->
 
-<!-- Birçok durum için head alanında bir 180×180px touch ikon yeterli -->
+<!-- Birçok durum için head alanında bir 180×180px touch simge yeterli -->
 <!-- Cihaz tarafından belirlenen benzersiz simgeler istiyorsanız -->
 <!-- farklı simge boyutlarından yararlanın -->
 <link rel="apple-touch-icon" sizes="57x57" href="path/to/icon@57.png">
@@ -481,12 +470,8 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 <!-- Web sayfanızı web uygulaması olarak tanımlar -->
 <meta name="mobile-web-app-capable" content="yes">
 
-<!-- Birincisi önerilen, resmi formatta olanıdır  -->
-<link rel="icon" sizes="192x192" href="nice-highres.png">
-<link rel="icon" sizes="128x128" href="niceicon.png">
-<!-- Apple önekli biçimindekilerin kullanımı kaldırılacaktır -->
-<link rel="apple-touch-icon" sizes="128x128" href="niceicon.png">
-<link rel="apple-touch-icon-precomposed" sizes="128x128" href="niceicon.png">
+<!-- Ana Ekran Simgesi  -->
+<link rel="icon" sizes="192x192" href="highres-icon.png">
 ```
 
 [Google Geliştiricisi](https://developer.chrome.com/multidevice/android/installtohomescreen)
@@ -522,25 +507,6 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 <meta name="msapplication-TileColor" content="#FF3300">
 <meta name="msapplication-TileImage" content="path/to/tileimage.jpg">
 <meta name="msapplication-window" content="width=1024;height=768">
-```
-
-### Microsoft Internet Explorer: Eski, Kullanmayın!
-
-``` html
-<!-- IE 6'da görsele tıklandığında çıkan, resim araç çubuğunu devre dışı bırakır (https://msdn.microsoft.com/en-us/library/ms532986(v=vs.85).aspx) -->
-<meta http-equiv="imagetoolbar" content="no">
-
-<!-- Form elemanlarından(input/buton) windows temasını kaldırır (https://support.microsoft.com/en-us/kb/322240) -->
-<meta name="MSThemeCompatible" content="no">
-
-<!-- Yalnızca IE 6 beta üzerinde olan özelliği kaldırır (https://stackoverflow.com/q/2167301) -->
-<meta name="MSSmartTagsPreventParsing" content="true">
-
-<!-- Sayfalar Ararası Geçişler (https://msdn.microsoft.com/en-us/library/ms532847(v=vs.85).aspx) -->
-<meta http-equiv="Page-Enter" content="revealtrans(duration=2,transition=2)">
-<meta http-equiv="Page-Exit" content="revealtrans(duration=3,transition=12)">
-<meta http-equiv="Site-Enter" content="revealtrans(duration=2,transition=2)">
-<meta http-equiv="Site-Exit" content="revealtrans(duration=3,transition=12)">
 ```
 
 ## App Links
@@ -648,7 +614,7 @@ Lütfen pull requestler için şu adımları izleyin:
 - Kapatma etiketi olmayan elementlere ters eğik çizgi eklemeyin - HTML 5 tanımları opsiyonel olduğunu belirtiyor
 - Değişikliğinizi destekleyecek bir dökümantasyon bağlantısı eklemeyi düşünün
 
-### Katkıda Bulunanlar
+## Katkıda Bulunanlar
 
 Katkıda bulunan bu muhteşem ötesi insanlara [göz gezdirin](https://github.com/joshbuchea/HEAD/graphs/contributors).
 
