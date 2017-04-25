@@ -1,7 +1,10 @@
 ## Kaldırılan İçerikler
 
-Alt kısımda yer alan meta etiketleri kullanılmayan ve eski olduğu bilgisinin artık bir değer yaratmadığı meta etiketleri içerir. Esas içeriğe [bu bağlantıdan](https://github.com/mkg0/HEAD) ulaşabilirsiniz.
+Alt kısımda yer alan meta etiketleri kullanılmayan ve eski olduğu bilgisinin artık bir değer yaratmadığı meta etiketleridir. Aşağıdaki değerleri hiçbir şeykilde kullanmayın.
 
+Güncel içeriğe [bu bağlantıdan](https://github.com/mkg0/HEAD) ulaşabilirsiniz. 
+
+```html
 <!-- Çok kısa (10 kelime veya daha azı) açıklama. Genellikle akademik yayınlar için -->
 <meta name="abstract" content="">
 
@@ -12,6 +15,12 @@ Alt kısımda yer alan meta etiketleri kullanılmayan ve eski olduğu bilgisinin
 
 <!-- Belgenin dilini belirtmek için kullanılır fakat çok desteklenmez. <html lang=""> kullanmanız tavsiye edilir -->
 <meta name="language" content="en">
+
+<link rel="shortcut icon" href="path/to/favicon.ico">
+
+<!-- Kullanışlı değil ve hatalı, inceleyin: https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Y_2eFRh9BOs/gULYapoRBwAJ -->
+<link rel="subresource" href="styles.css">
+```
 
 ### Microsoft Internet Explorer
 

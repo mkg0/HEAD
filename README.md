@@ -9,7 +9,6 @@ Sayfanızın `<head>` bölümü içerisine girebilecek her şeyin listesi
 - [Meta](#meta)
   - [Meta: Önerilmeyenler](#meta-onerilmeyenler)
 - [Link](#link)
-  - [Link: Önerilmeyenler](#link-onerilmeyenler)
   - [Favori Simgeleri](#favori-simgeleri)
 - [Sosyal](#sosyal)
   - [Facebook Open Graph](#facebook-open-graph)
@@ -276,16 +275,6 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <link rel="prerender" href="https://example.com/">
 <link rel="preload" href="image.png" as="image">
 <!-- Detaylı bilgi: https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
-```
-
-### Link: Önerilmeyenler
-Aşağıda, önerilmeyen link bağıntıları verilmiştir:
-
-```html
-<link rel="shortcut icon" href="path/to/favicon.ico">
-
-<!-- Kullanışlı değil ve hatalı, inceleyin: https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Y_2eFRh9BOs/gULYapoRBwAJ -->
-<link rel="subresource" href="styles.css">
 ```
 
 ### Favori Simgeleri
