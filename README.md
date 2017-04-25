@@ -54,16 +54,16 @@ Basit ve sade web siteleri için başlıca etiketler:
 ## Elementler
 
 ``` html
-<!-- Döküman Başlığı -->
+<!-- Doküman Başlığı -->
 <title>Sayfa Başlığı</title>
 
-<!-- Base URL döküman içerisinde ilişkisel olarak girilmiş bağlantılar(relative path) için başlangıç noktası oluşturur -->
+<!-- Base URL doküman içerisinde ilişkisel olarak girilmiş bağlantılar(relative path) için başlangıç noktası oluşturur -->
 <base href="https://example.com/page.html">
 
 <!-- Harici CSS -->
 <link rel="stylesheet" href="styles.css">
 
-<!-- Döküman içi CSS -->
+<!-- Doküman içi CSS -->
 <style>
   /* ... */
 </style>
@@ -76,14 +76,14 @@ Basit ve sade web siteleri için başlıca etiketler:
 ## Meta
 
 ``` html
-<meta charset="utf-8"> <!-- Döküman için karakter kodlaması belirler -->
+<meta charset="utf-8"> <!-- Doküman için karakter kodlaması belirler -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Yukarıdaki 3 meta etiketi head bölümü içerisinde *ilk sırada* konumlanmalıdır; diğer head içerikleri bu taglerin *ardından* yerleştirilmelidir -->
 
 <!-- Kaynakların nereden yükleneceğini kontrol eder -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-<!-- Döküman içerisinde olabildiğince önce konumlandırın -->
+<!-- Doküman içerisinde olabildiğince önce konumlandırın -->
 <!-- Sadece bu etiketin altındaki içeriğe etki eder -->
 
 <!-- Web uygulamasının adı (yalnızca web sayfası bir uygulamaysa kullanılmalı.) -->
@@ -200,6 +200,9 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 ## Link
 
 ``` html
+<!-- CSS stil dosyasını işaret eder -->
+<link rel="stylesheet" href="https://example.com/styles.css">
+
 <!-- Yinelenen içerik sorunlarını önlemeye yardımcı olur -->
 <link rel="canonical" href="https://example.com/2010/06/9-things-to-do-before-entering-social-media.html">
 
@@ -208,9 +211,6 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 
 <!--Mevcut sayfanın AMP HTML versiyonuna ait linki belirtir -->
 <link rel="amphtml" href="https://example.com/path/to/amp-version.html">
-
-<!-- CSS stil dosyasını işaret eder -->
-<link rel="stylesheet" href="https://example.com/styles.css">
 
 <!-- Web uygulamaları için "kurulum" kimlik bilgilerini belirten bir JSON dosyasını tanımlar -->
 <link rel="manifest" href="manifest.json">
@@ -229,8 +229,8 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <link rel="me" href="mailto:name@example.com">
 <link rel="me" href="sms:+15035550125">
 
-<!-- Geçerli belgenin arşiv bağlantısını içeren başka bir belgeye işaret eder -->
-<link rel="archives" href="https://example.com/2003/05/" title="May 2003">
+<!-- Dokümansal, kayıtsal veya tarihsel yönden ilişkisel olan bir koleksiyona işaret eder -->
+<link rel="archives" href="https://example.com/2003/05/">
 
 <!-- Bir hiyerarşik yapı içerisinde en üst seviyedeki kaynağa işaret eder -->
 <link rel="index" href="https://example.com/" title="DeWitt Clinton">
@@ -241,7 +241,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <!-- Geçerli belgenin bulunduğu sıradaki önceki kaynağa yönlendirir -->
 <link rel="prev" href="https://example.com/opensearch/opensearch-and-openid-a-sure-way-to-get-my-attention/" title="OpenSearch and OpenID? A sure way to get my attention.">
 
-<!-- Kendine referans verir - döküman birden fazla referansa sahip olduğunda faydalıdır -->
+<!-- Kendine referans verir - doküman birden fazla referansa sahip olduğunda faydalıdır -->
 <link rel="self" type="application/atom+xml" href="https://example.com/atomFeed.php?page=3">
 
 <!-- Bir dizi belgede sırasıyla ilk, bir sonraki, bir önceki ve son sıradaki belgeleri işaret eder -->
@@ -260,7 +260,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <link rel="webmention" href="https://example.com/webmention">
 
 <!-- Harici bir HTML belgesini mevcut olan HTML belgesine dahil eder -->
-<link rel="import" href="component.html">
+<link rel="import" href="/path/to/component.html">
 
 <!-- Open Search -->
 <link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="Search Title">
@@ -474,7 +474,7 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 <link rel="icon" sizes="192x192" href="highres-icon.png">
 ```
 
-[Google Geliştiricisi](https://developer.chrome.com/multidevice/android/installtohomescreen)
+- [Google Geliştiricisi](https://developer.chrome.com/multidevice/android/installtohomescreen)
 
 ### Microsoft Internet Explorer
 
@@ -525,7 +525,7 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 <!-- Detaylı bilgi: http://applinks.org/documentation/ -->
 ```
 
-- [App Links Dökümantasyonu](http://applinks.org/documentation/)
+- [App Links Dokümantasyonu](http://applinks.org/documentation/)
 
 ## Browsers (Çin)
 
@@ -566,7 +566,7 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 <meta name="wap-font-scale" content="no">
 ```
 
-- [UC Browser Dökümantasyonu](http://www.uc.cn/download/UCBrowser_U3_API.doc)
+- [UC Browser Dokümantasyonu](http://www.uc.cn/download/UCBrowser_U3_API.doc)
 
 ## Notlar
 
@@ -581,8 +581,8 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 
 ## Diğer Kaynaklar
 
-- [HTML5 Boilerplate Dökümantasyonu: HTML](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md)
-- [HTML5 Boilerplate Dökümantasyonu: Genişlet ve özelleştir](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md)
+- [HTML5 Boilerplate Dokümantasyonu: HTML](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md)
+- [HTML5 Boilerplate Dokümantasyonu: Genişlet ve özelleştir](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md)
 
 ## İlgili Projeler
 
@@ -612,7 +612,7 @@ Lütfen pull requestler için şu adımları izleyin:
 - Tek seferde yalnıza bir etiket veya ilişkili olan bir etiket grubu düzenleyin
 - Özelliklerde çift tırnak kullanın
 - Kapatma etiketi olmayan elementlere ters eğik çizgi eklemeyin - HTML 5 tanımları opsiyonel olduğunu belirtiyor
-- Değişikliğinizi destekleyecek bir dökümantasyon bağlantısı eklemeyi düşünün
+- Değişikliğinizi destekleyecek bir dokümantasyon bağlantısı eklemeyi düşünün
 
 ## Katkıda Bulunanlar
 
