@@ -1,6 +1,6 @@
 # HEAD
 
-Sayfanızın `<head>` bölümü içerisine girebilecek her şeyin listesi
+Sayfanızın `<head>` bölümü içerisine girebilecek her şeyin listesi. Orijinali [Josh Buchea](https://github.com/joshbuchea)’ya ait [HEAD](https://github.com/joshbuchea/HEAD) reposunun türkçe çevirisidir. Düzenlemelerden haberdar olmak için repoyu izlemeniz tavsiye edilir.
 
 ## İçerik Tablosu
 
