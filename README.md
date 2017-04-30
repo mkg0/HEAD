@@ -293,12 +293,9 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <!-- favicon.ico isminde bir dosyayı kök dizinine yerleştirin - element gerekli değil -->
 
 <!-- IE 11, Chrome, Firefox, Safari, Opera için -->
-<link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="path/to/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="path/to/favicon-48.png" sizes="48x48" type="image/png">
-<link rel="icon" href="path/to/favicon-62.png" sizes="62x62" type="image/png">
-<link rel="icon" href="path/to/favicon-192.png" sizes="192x192" type="image/png">
-<!-- Detaylı bilgi: https://bitsofco.de/all-about-favicons-and-touch-icons/ -->
+<link rel="icon" type="image/png" sizes="16x16" href="/path/to/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/path/to/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/path/to/favicon-96x96.png">
 ```
 
 - [Favori Simgeleri Hakkında Her Şey (Ve Touch Simgeler)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
@@ -405,17 +402,17 @@ Pinterest, [yardım merkezine](https://help.pinterest.com/en/articles/prevent-pe
 <meta name="apple-mobile-web-app-title" content="Uygulama Başlığı">
 
 <!-- Touch İkonlar -->
-<link rel="apple-touch-icon" href="path/to/apple-touch-icon.png">
-<link rel="apple-touch-icon-precomposed" href="path/to/apple-touch-icon-sikistirilmamis.png">
+<link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="/path/to/apple-touch-icon-sikistirilmamis.png">
 <!-- iOS 8+ artık precomposed desteklemiyor, yalnızca apple-touch-icon zorunlu -->
 
 <!-- Birçok durum için head alanında bir 180×180px touch simge yeterli -->
 <!-- Cihaz tarafından belirlenen benzersiz simgeler istiyorsanız -->
 <!-- farklı simge boyutlarından yararlanın -->
-<link rel="apple-touch-icon" sizes="57x57" href="path/to/icon@57.png">
-<link rel="apple-touch-icon" sizes="72x72" href="path/to/icon@72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="path/to/icon@114.png">
-<link rel="apple-touch-icon" sizes="144x144" href="path/to/icon@144.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/path/to/icon@57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/path/to/icon@72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/path/to/icon@114.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/path/to/icon@144.png">
 
 <!-- Başlangıç Görseli ( Kullanımdan kaldırıldı ) -->
 <link rel="apple-touch-startup-image" href="path/to/startup.png">
@@ -503,7 +500,7 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 <meta name="msapplication-task" content="name=Check Order Status;action-uri=./orderStatus.aspx?src=IE9;icon-uri=./favicon.ico">
 <meta name="msapplication-task-separator" content="1">
 <meta name="msapplication-TileColor" content="#FF3300">
-<meta name="msapplication-TileImage" content="path/to/tileimage.jpg">
+<meta name="msapplication-TileImage" content="/path/to/tileimage.jpg">
 <meta name="msapplication-window" content="width=1024;height=768">
 ```
 
