@@ -290,7 +290,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 
 ``` html
 <!-- IE 10 ve altı için -->
-<!-- Link yok, sadece favicon.ico isminde bir dosyayı kök dizinine yerleştirin -->
+<!-- favicon.ico isminde bir dosyayı kök dizinine yerleştirin - element gerekli değil -->
 
 <!-- IE 11, Chrome, Firefox, Safari, Opera için -->
 <link rel="icon" href="path/to/favicon-16.png" sizes="16x16" type="image/png">
