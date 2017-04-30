@@ -7,7 +7,6 @@ Sayfanızın `<head>` bölümü içerisine girebilecek her şeyin listesi. Oriji
 - [Önerilenler Minimum](#onerilenler-minimum)
 - [Elementler](#elementler)
 - [Meta](#meta)
-  - [Meta: Önerilmeyenler](#meta-onerilmeyenler)
 - [Link](#link)
   - [Favori Simgeleri](#favori-simgeleri)
 - [Sosyal](#sosyal)
@@ -156,60 +155,6 @@ Basit ve sade web siteleri için başlıca etiketler:
 - [Wikipedia'de ICBM](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
 - [Wikipedia'de Geotagging](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
 
-### Meta: Önerilmeyenler
-Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları için önerilmeyen meta özellikleri verilmiştir:
-
-```html
-<!-- Google görmezden geliyor & Bing ise spam göstergesi olarak algılıyor -->
-<meta name="keywords" content="your,keywords,here,comma,separated,no,spaces">
-<!-- Herhangi bir arama motorunda kullanıldığına dair bir belirti yok -->
-<meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm">
-
-<!-- Spam botlarına kolay email kaynağı sağlıyor -->
-<meta name="reply-to" content="email@example.com">
-
-<!--  <link rel="author"> ya da humans.txt dosyası kullanılması tavsiye edilir -->
-<meta name="author" content="name, email@example.com">
-<meta name="designer" content="">
-<meta name="owner" content="">
-
-<!-- Arama botlarına belli bir periyottan sonra yeniden ziyaret etmesini belirtir. Fakat çoğu arama motoru, tarama periyotlarını kendi belirlediği için desteklenmiyor -->
-<meta name="revisit-after" content="7 days">
-
-<!-- Belirli bir süreden sonra kullanıcıyı yeni bir URLe gönderir -->
-<!-- W3C bu etiketin kullanılmamasını, Google ise sunucu taraflı  301 yönlendirmesini tavsiye eder -->
-<meta http-equiv="refresh" content="300; url=https://example.com/">
-
-<!-- Web sitenin konusunu belirtir -->
-<meta name="topic" content="">
-
-<!-- Şirketin kısa özeti veya web sitesinin amacı -->
-<meta name="summary" content="">
-
-<!-- Kullanımdan kalkan, keywords meta etiketi ile aynı işe yarayan bir etiket -->
-<meta name="classification" content="business">
-
-<!-- URLin variantı. Daha eski ve desteklenmiyor -->
-<meta name="identifier-URL" content="https://example.com/">
-
-<!-- Keywords meta etiketi ile benzer özellikte -->
-<meta name="category" content="">
-
-<!-- Web sitenin bütün ülkeleri ve dilleri kapsadığını teyid eder -->
-<meta name="coverage" content="Worldwide">
-
-<!-- coverage etiketi ile aynı -->
-<meta name="distribution" content="Global">
-
-<!-- Hangi kullanıcının internete erişebileceğini kontrol eder* -->
-<meta http-equiv="Pics-label" content="value">
-
-<!-- Cache Kontrolü -->
-<!-- Cache kontrolünü sunucu tarafında sağlamak tercih edilmelidir -->
-<meta http-equiv="Expires" content="0">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-Control" content="no-cache">
-```
 
 ## Link
 
@@ -315,8 +260,6 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <meta property="og:site_name" content="Site Name">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="">
-<!-- Facebook: https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<!-- Open Graph: http://ogp.me/ -->
 ```
 
 - [Facebook Open Graph İşaretlemesi](https://developers.facebook.com/docs/sharing/webmasters#markup)
@@ -348,8 +291,6 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <meta name="twitter:title" content="Content Title">
 <meta name="twitter:description" content="Content description less than 200 characters">
 <meta name="twitter:image" content="https://example.com/image.jpg">
-<!-- Detaylı bilgi: https://dev.twitter.com/cards/getting-started -->
-<!-- Doğrulama: https://dev.twitter.com/docs/cards/validation/validator -->
 ```
 
 - [Twitter Kartları: Başlangıç Rehberi](https://dev.twitter.com/cards/getting-started)
@@ -402,17 +343,10 @@ Pinterest, [yardım merkezine](https://help.pinterest.com/en/articles/prevent-pe
 <meta name="apple-mobile-web-app-title" content="Uygulama Başlığı">
 
 <!-- Touch İkonlar -->
-<link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
-<link rel="apple-touch-icon-precomposed" href="/path/to/apple-touch-icon-sikistirilmamis.png">
-<!-- iOS 8+ artık precomposed desteklemiyor, yalnızca apple-touch-icon zorunlu -->
-
 <!-- Birçok durum için head alanında bir 180×180px touch simge yeterli -->
-<!-- Cihaz tarafından belirlenen benzersiz simgeler istiyorsanız -->
-<!-- farklı simge boyutlarından yararlanın -->
-<link rel="apple-touch-icon" sizes="57x57" href="/path/to/icon@57.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/path/to/icon@72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/path/to/icon@114.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/path/to/icon@144.png">
+<link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
+<!-- Not: iOS 7 Safari, sembollere efekt eklemez. -->
+<!-- Safari'nin önceki versiyonları "-precomposed.png" son eke sahip sembollere efekt eklemez. -->
 
 <!-- Başlangıç Görseli ( Kullanımdan kaldırıldı ) -->
 <link rel="apple-touch-startup-image" href="path/to/startup.png">
@@ -481,26 +415,20 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 <meta name="msapplication-tap-highlight" content="no">
 
 <!-- Sabitlenmiş(pinned) siteler (https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx) -->
-<meta name="application-name" content="Contoso Pinned Site Caption">
-<meta name="msapplication-tooltip" content="Example Tooltip Text">
-<meta name="msapplication-starturl" content="/">
-
-<meta name="msapplication-config" content="http://example.com/browserconfig.xml">
-
-<meta name="msapplication-allowDomainApiCalls" content="true">
-<meta name="msapplication-allowDomainMetaTags" content="true">
-<meta name="msapplication-badge" content="frequency=30; polling-uri=http://example.com/id45453245/polling.xml">
+<meta name="application-name" content="Örnek Başlık">
+<meta name="msapplication-tooltip" content="Sitenin ne yaptığına ilişkin açıklama.">
+<meta name="msapplication-starturl" content="http://example.com/index.html?pinned=true">
 <meta name="msapplication-navbutton-color" content="#FF3300">
-<meta name="msapplication-notification" content="frequency=60;polling-uri=http://example.com/livetile">
-<meta name="msapplication-square150x150logo" content="path/to/logo.png">
-<meta name="msapplication-square310x310logo" content="path/to/largelogo.png">
-<meta name="msapplication-square70x70logo" content="path/to/tinylogo.png">
-<meta name="msapplication-wide310x150logo" content="path/to/widelogo.png">
-<meta name="msapplication-task" content="name=Check Order Status;action-uri=./orderStatus.aspx?src=IE9;icon-uri=./favicon.ico">
-<meta name="msapplication-task-separator" content="1">
+<meta name="msapplication-window" content="width=800;height=600">
+<meta name="msapplication-task" content="name=Task 1;action-uri=http://host/Page1.html;icon-uri=http://host/icon1.ico">
+<meta name="msapplication-task" content="name=Task 2;action-uri=http://microsoft.com/Page2.html;icon-uri=http://host/icon2.ico">
+<meta name="msapplication-badge" value="frequency=DAKIKA_CINSINDEN_SAYI;polling-uri=http://example.com/path/to/file.xml">
 <meta name="msapplication-TileColor" content="#FF3300">
 <meta name="msapplication-TileImage" content="/path/to/tileimage.jpg">
-<meta name="msapplication-window" content="width=1024;height=768">
+
+<meta name="msapplication-config" content="http://example.com/browserconfig.xml">
+<meta name="msapplication-notification" content="frequency=60;polling-uri=http://example.com/livetile;polling-uri2=http://example.com/livetile2">
+<meta name="msapplication-task-separator" content="1">
 ```
 
 ## App Links
@@ -587,7 +515,7 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 
 ## Diğer Formatlar
 
-- [PDF](https://gitprint.com/joshbuchea/HEAD/blob/master/README.md)
+- [PDF](https://gitprint.com/mkg0/HEAD/blob/master/README.md)
 
 ## Çeviriler
 
@@ -600,13 +528,28 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 
 ## Katkıda Bulun
 
-Düzenleme veya ilave önermek için bir issue açın ya da pull request gönderin.
+**Düzenleme veya ilave önermek için bir issue açın ya da pull request gönderin.**
+
+### Rehber
+
+The **HEAD** resposu bu iki branchi barındırır:
+
+#### 1. `master`
+
+Bu branch `README.md` dosyasından oluşur ve düzenlemeler otomatik olarak [\<head> Kopya Kağıdı](http://gethead.info/) sitesine yansır.
+
 Lütfen pull requestler için şu adımları izleyin:
 
 - Tek seferde yalnıza bir etiket veya ilişkili olan bir etiket grubu düzenleyin
 - Özelliklerde çift tırnak kullanın
 - Kapatma etiketi olmayan elementlere ters eğik çizgi eklemeyin - HTML 5 tanımları opsiyonel olduğunu belirtiyor
 - Değişikliğinizi destekleyecek bir dokümantasyon bağlantısı eklemeyi düşünün
+
+#### 2. `gh-pages`
+
+Bu branch [\<head> Kopya Kağıdı](http://gethead.info/) sitesinin sağlayıcısıdır. `README.md` Markdown dosyasını yayınlamak için [Jekyll](https://jekyllrb.com/) [GitHub Pages](https://pages.github.com/) vasıtasıyla kullanıyoruz. Bütün web site bazlı düzenlemeler burada olmalı.
+
+Bu kısımda çalışmadan önce, [Jekyll Dokümantasyonunu](https://jekyllrb.com/docs/home/) incelemek ve Jekyll'ın nasıl çalıştığını incelemek isteyebilirsiniz.
 
 ## Katkıda Bulunanlar
 
