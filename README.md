@@ -247,13 +247,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <link rel="archives" href="https://example.com/2003/05/">
 
 <!-- Bir hiyerarşik yapı içerisinde en üst seviyedeki kaynağa işaret eder -->
-<link rel="index" href="https://example.com/" title="DeWitt Clinton">
-
-<!-- Dokümanın başlangıç noktasını işaret eder -->
-<link rel="start" href="https://example.com/photos/pattern_recognition_1_about/" title="Pattern Recognition 1">
-
-<!-- Geçerli belgenin bulunduğu sıradaki önceki kaynağa yönlendirir -->
-<link rel="prev" href="https://example.com/opensearch/opensearch-and-openid-a-sure-way-to-get-my-attention/" title="OpenSearch and OpenID? A sure way to get my attention.">
+<link rel="index" href="https://example.com/">
 
 <!-- Kendine referans verir - doküman birden fazla referansa sahip olduğunda faydalıdır -->
 <link rel="self" type="application/atom+xml" href="https://example.com/atomFeed.php?page=3">
@@ -261,7 +255,7 @@ Aşağıda, düşük kullanım oranları ve/veya artık kullanılmadıkları iç
 <!-- Bir dizi belgede sırasıyla ilk, bir sonraki, bir önceki ve son sıradaki belgeleri işaret eder -->
 <link rel="first" href="https://example.com/atomFeed.php">
 <link rel="next" href="https://example.com/atomFeed.php?page=4">
-<link rel="previous" href="https://example.com/atomFeed.php?page=2">
+<link rel="prev" href="https://example.com/atomFeed.php?page=2">
 <link rel="last" href="https://example.com/atomFeed.php?page=147">
 
 <!-- Üçüncü taraf servislerden blog hizmeti sağlantığında kullanılır  -->
