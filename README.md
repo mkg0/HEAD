@@ -469,13 +469,12 @@ Chrome 31'den itibaren, web uygulamanızı tıpkı Safari'deki gibi "uygulama mo
 <link rel="icon" sizes="192x192" href="highres-icon.png">
 ```
 
-- [Google Geliştiricisi](https://developer.chrome.com/multidevice/android/installtohomescreen)
+- [Google Developers](https://developer.chrome.com/multidevice/android/installtohomescreen)
 
 ### Microsoft Internet Explorer
 
 ``` html
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta http-equiv="cleartype" content="on">
 <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
 
 <!-- Windows Phone üzerindeki IE 10'da bağlantı vurgulamasını kaldırır (https://blogs.windows.com/buildingapps/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10/) -->

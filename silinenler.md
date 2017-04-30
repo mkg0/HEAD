@@ -39,4 +39,9 @@ Güncel içeriğe [bu bağlantıdan](https://github.com/mkg0/HEAD) ulaşabilirsi
 <meta http-equiv="Page-Exit" content="revealtrans(duration=3,transition=12)">
 <meta http-equiv="Site-Enter" content="revealtrans(duration=2,transition=2)">
 <meta http-equiv="Site-Exit" content="revealtrans(duration=3,transition=12)">
+
+<meta http-equiv="cleartype" content="on">
+<meta name="msapplication-allowDomainApiCalls" content="true">		
+<meta name="msapplication-allowDomainMetaTags" content="true">
+
 ```
