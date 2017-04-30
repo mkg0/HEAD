@@ -45,7 +45,7 @@ Basit ve sade web siteleri için başlıca etiketler:
 ```html
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Yukarıdaki 3 meta etiketi head bölümü içerisinde *ilk sırada* konumlanmalıdır; diğer head içerikleri bu etiketlerin *ardından* yerleştirilmelidir -->
 <title>Sayfa Başlığı</title>
 ```
