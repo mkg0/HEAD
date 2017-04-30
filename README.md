@@ -105,6 +105,21 @@ Basit ve sade web siteleri için başlıca etiketler:
 <!-- Google Search Console için site sahipliğini doğrular -->
 <meta name="google-site-verification" content="verification_token">
 
+<!-- Yandex Webmasters için site sahipliğini doğrular -->
+<meta name="yandex-verification" content="verification_token">
+
+<!-- Bing Webmaster Center için site sahipliğini doğrular -->
+<meta name="msvalidate.01" content="verification_token">
+
+<!-- Alexa Console için site sahipliğini doğrular -->
+<meta name="alexaVerifyID" content="verification_token">
+
+<!-- Pinterest Console için site sahipliğini doğrular -->
+<meta name="p:domain_verify" content="code from pinterest">
+
+<!-- Norton Safe Web için site sahipliğini doğrular -->
+<meta name="norton-safeweb-site-verification" content="norton code">
+
 <!-- Web sitesini oluşturmak için kullanılan araç (örnek - WordPress, Dreamweaver) -->
 <meta name="generator" content="program">
 
