@@ -178,7 +178,7 @@ Basit ve sade web siteleri için başlıca etiketler:
 <link rel="author" href="humans.txt">
 
 <!-- Telif hakkı bilidirimini açıklayan bağlantıyı işaret eder -->
-<link rel="copyright" href="copyright.html">
+<link rel="license" href="copyright.html">
 
 <!-- Belgenin başka bir dildeki bağlantısına refere eder -->
 <link rel="alternate" href="https://es.example.com/" hreflang="es">
