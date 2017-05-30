@@ -385,7 +385,7 @@ Pinterest, [yardım merkezine](https://help.pinterest.com/en/articles/prevent-pe
 <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/APP_ID">
 
 <!-- Çeviri istemini devre dışı bırak -->
-<meta name="google" value="notranslate">
+<meta name="google" content="notranslate">
 ```
 ### Google Chrome Mobil (Yalnızca Android)
 
