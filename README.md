@@ -203,7 +203,7 @@ Basit ve sade web siteleri için başlıca etiketler:
 <link rel="prev" href="https://example.com/atomFeed.php?page=2">
 <link rel="last" href="https://example.com/atomFeed.php?page=147">
 
-<!-- Üçüncü taraf servislerden blog hizmeti sağlantığında kullanılır  -->
+<!-- Üçüncü taraf servislerden blog hizmeti sağlandığında kullanılır  -->
 <link rel="EditURI" href="https://example.com/xmlrpc.php?rsd" type="application/rsd+xml" title="RSD">
 
 <!-- Başka bir WordPress gönderisi sizin blogunuza veya gönderinize bağlantı verdiğinde otomatik bir ping oluşturur -->
